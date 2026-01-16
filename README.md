@@ -14,7 +14,7 @@ Integração do GraphQL com Entity Framework Core
 
 
 
-Há algum requisito ou pré-requisito para o curso?
+Há algum requisito ou pré-requisito?
 
 ASP.NET Core
 
@@ -22,7 +22,7 @@ C#
 
 
 
-Para quem é este curso:
+Para quem é este conteudo:
 
 Desenvolvedores .NET que querem dominar GraphQL
 
