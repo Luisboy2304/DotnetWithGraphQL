@@ -1,5 +1,10 @@
+using GraphQL;
 using Microsoft.EntityFrameworkCore;
 using Movies.API.Data;
+using Movies.API.GraphQL;
+using Movies.API.GraphQL.Mutations;
+using Movies.API.GraphQL.Queries;
+using Movies.API.GraphQL.Types;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+//luis add conection banco
 builder.Services.AddDbContext<MovieDbContent>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
         sqlOptions => sqlOptions.EnableRetryOnFailure(
@@ -18,6 +24,13 @@ builder.Services.AddDbContext<MovieDbContent>(options =>
         )
     ));
 
+//luis add dependencia para class do schema do movie
+builder.Services.AddScoped<MovieQuery>();
+builder.Services.AddScoped<MovieMutation>();
+builder.Services.AddScoped<MovieSchema>();
+
+builder.Services.AddGraphQL(options => 
+                          options.AddGraphTypes().AddSystemTextJson().AddDataLoader());
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -31,6 +44,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+//luis add use graph
+app.UseGraphQL<MovieSchema>();
 
 app.UseHttpsRedirection();
 

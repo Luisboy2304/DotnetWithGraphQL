@@ -1,5 +1,5 @@
 ﻿using GraphQL.Types;
-using Movies.API.Models;
+using Movies.Models;
 
 namespace Movies.API.GraphQL.Types
 {

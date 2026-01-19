@@ -1,5 +1,5 @@
 ﻿using GraphQL.Types;
-using Movies.API.Models.Enums;
+using Movies.Models.Enums;
 
 namespace Movies.API.GraphQL.Types.Enums
 {

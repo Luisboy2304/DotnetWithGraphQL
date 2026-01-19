@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Movies.API.Models;
+using Movies.Models;
 
 namespace Movies.API.Data
 {
@@ -33,3 +33,4 @@ namespace Movies.API.Data
         }
     }
 }
+// cria os models e dbcontext depois cria os types depois cria queries depois schema

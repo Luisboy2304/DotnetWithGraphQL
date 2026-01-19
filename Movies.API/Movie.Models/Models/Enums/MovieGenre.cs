@@ -1,4 +1,4 @@
-﻿namespace Movies.API.Models.Enums
+﻿namespace Movies.Models.Enums
 {
     public enum MovieGenre
     {
@@ -6,6 +6,6 @@
         Action,
         Romance,
         Fantasy,
-        Horrer
+        Horror
     }
 }

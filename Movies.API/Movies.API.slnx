@@ -1,3 +1,10 @@
 <Solution>
+  <Folder Name="/Domain/">
+    <Project Path="Movie.Models/Movie.Models.csproj" Id="26036367-4d66-49f9-9ad1-3af3289d5b9c" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="Movies.GraphQL.Client/Movies.GraphQL.Client.csproj" Id="d81b7466-a3ae-47aa-9e84-85aebdeff91f" />
+  </Folder>
+  <Project Path="Movie.Client.Console/Movie.Client.Console.csproj" Id="5ceaa0cc-2a58-48a5-a7d1-e40a046b0db5" />
   <Project Path="Movies.API/Movies.API.csproj" />
 </Solution>

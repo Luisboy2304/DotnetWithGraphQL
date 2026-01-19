@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Movie.Client.Console": {
+      "commandName": "Project"
+    },
+    "Profile 1": {
+      "commandName": "Project"
+    }
+  }
+}
